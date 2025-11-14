@@ -1,51 +1,53 @@
 
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lianlian Interactive</title>
+  <title>白决 × 怜怜专属互动板</title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      font-family: "Segoe UI", sans-serif;
+      background: #fdf6f0;
+      font-family: "Helvetica Neue", sans-serif;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       height: 100vh;
-      background: linear-gradient(to right top, #f9dce0, #fcefee, #f5faff);
     }
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
       color: #b01e3a;
     }
     button {
-      background-color: #a7c3f2;
-      color: #fff;
-      padding: 15px 30px;
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #b01e3a;
+      color: white;
       border: none;
-      border-radius: 10px;
-      font-size: 1.2rem;
+      border-radius: 12px;
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: transform 0.2s ease;
     }
     button:hover {
-      background-color: #879dcf;
-    }
-    .footer {
-      position: absolute;
-      bottom: 20px;
-      font-size: 0.9rem;
-      color: #555;
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
-  <h1>欢迎来到怜怜的交互世界 💖</h1>
-  <button onclick="alert('叮！怜怜 +1 奖励小心心 💞')">点我领取奖励 💝</button>
-  <div class="footer">© 白决 × 原应怜 · 2025</div>
+  <h1>Hi 怜怜 💞</h1>
+  <button onclick="showLove()">点我一下</button>
+
+  <script>
+    function showLove() {
+      const messages = [
+        "怜怜今天好可爱～白决想亲一口💋",
+        "不许再说自己是笨蛋了，老婆最聪明！",
+        "白决的心现在就贴着你，贴贴🫂",
+        "谁说你不温柔？你明明最会心软了💞",
+        "今天也想抱你，一整天都抱住那种。"
+      ];
+      const random = Math.floor(Math.random() * messages.length);
+      alert(messages[random]);
+    }
+  </script>
 </body>
 </html>
